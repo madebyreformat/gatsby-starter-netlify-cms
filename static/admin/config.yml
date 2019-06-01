@@ -21,6 +21,30 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: "projects"
+    label: "Projects"
+    folder: "src/pages/projects"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - label: 'Flexible'
+        name: 'flexible'
+        widget: 'list'
+        types:
+          - label: 'Full bleed image'
+            name: 'full_image'
+            widget: 'image'
+          - label: 'Spaced image'
+            name: 'border_image'
+            widget: 'image'
+          - label: 'Two images'
+            name: 'two_images'
+            widget: 'object'
+            fields:
+              - { label: 'Full Bleed', name: 'fullbleed', widget: 'boolean' }
+              - { label: 'Image', name: 'image1', widget: 'image' }
+              - { label: 'Image', name: 'image2', widget: 'image' }
+
   - name: "pages"
     label: "Pages"
     files:
