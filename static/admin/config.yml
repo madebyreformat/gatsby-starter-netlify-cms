@@ -25,18 +25,24 @@ collections:
     label: "Projects"
     folder: "src/pages/projects"
     create: true
-    slug: "{{year}}-{{slug}}"
+    slug: "{{slug}}"
+    identifier_field: title
     fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
       - label: 'Flexible'
         name: 'flexible'
         widget: 'list'
         types:
-          - label: 'Full bleed image'
-            name: 'full_image'
-            widget: 'image'
-          - label: 'Spaced image'
-            name: 'border_image'
-            widget: 'image'
+          - label: 'Single image'
+            name: 'single_image'
+            widget: 'object'
+            fields:
+              - { label: 'Full Bleed', name: 'fullbleed', widget: 'boolean' }
+              - { label: 'Image', name: 'image1', widget: 'image' }
           - label: 'Two images'
             name: 'two_images'
             widget: 'object'
