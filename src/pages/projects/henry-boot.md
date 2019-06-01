@@ -1,7 +1,7 @@
 ---
 templateKey: project-post
 title: Henry Boot
-featuredimage: /img/chemex.jpg
+featuredimage: /img/blog-index.jpg
 tags:
   - brewing
   - chemex
